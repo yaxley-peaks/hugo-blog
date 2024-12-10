@@ -1,0 +1,9 @@
+#+title: First post
+#+date: 2024-12-09
+#+author: yaxley peaks
+#+summary: lalalala
+
+
+* First post
+
+haha

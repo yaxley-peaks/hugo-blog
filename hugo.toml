@@ -1,0 +1,38 @@
+baseURL = 'https://blog.yaxley.in/'
+languageCode = 'en-in'
+title = 'An archive of my own'
+theme = 'cactus'
+
+
+
+[params]
+description = "This is where I write things I want to write whenever I feel like it."
+themeColor = "theme-base-08"
+colorTheme = "light"
+mainSection = "posts"
+showAllPostsOnHomePage = true
+tocInline = true
+logo = "images/favicon.ico"
+
+[params.comments]
+enabled = false
+
+[markup]
+defaultMarkdownHandler = 'org'
+
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All Posts"
+url = "/posts"
+weight = 2
+
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
