@@ -1,0 +1,15 @@
+#+title: MathJax
+#+slug: mathjax
+#+author: Yaxley Peaks
+#+date: 2024-08-23
+#+mathjax: true
+#+summary: A celebration of finally having MathJax support on this site.
+
+* MathJax on my blog
+
+[[./soyjax.png]]
+
+
+$$
+\int_{15}^{16} 2xdx + e^{-jwt}
+$$

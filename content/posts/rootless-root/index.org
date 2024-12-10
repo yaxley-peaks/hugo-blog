@@ -1,4 +1,4 @@
-#+title: The Unix Koans of Master Foo
+#+title: The Unix Koans of Master Foo, &c
 #+summary: Rootless root and other tomes
 #+tags: post
 #+date: 2024-11-01
