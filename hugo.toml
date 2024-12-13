@@ -13,6 +13,8 @@ mainSection = "posts"
 showAllPostsOnHomePage = true
 tocInline = true
 logo = "images/favicon.ico"
+showProjectsList = true
+projectsUrl = "https://github.com/yaxley-peaks"
 
 [params.comments]
 enabled = false
