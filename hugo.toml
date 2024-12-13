@@ -6,7 +6,7 @@ theme = 'cactus'
 
 
 [params]
-description = "This is where I write things I want to write whenever I feel like it."
+description = "*Hello 👋*, You successfully made it here."
 themeColor = "theme-base-08"
 colorTheme = "light"
 mainSection = "posts"
@@ -18,6 +18,9 @@ projectsUrl = "https://github.com/yaxley-peaks"
 
 [params.comments]
 enabled = false
+
+[params.buttons]
+enabled = true
 
 [markup]
 defaultMarkdownHandler = 'org'
