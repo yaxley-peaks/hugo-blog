@@ -1,0 +1,19 @@
+#+title: Gmod crash fix
+#+author: Yaxley Peaks
+#+summary: Note to self to fix gmod crashing
+#+tags: post
+#+date: 2023-02-04
+#+slug: gmod
+
+* Note to self:
+Gmod crashes on joining multiplayer on Linux mint.
+
+Running
+
+#+begin_src shell
+sudo apt install libgconf-2-4 libgconf2-dev
+#+end_src
+
+Seems to fix it.
+
+Thanks to [[https://steamcommunity.com/app/4000/discussions/1/2765630416822463422/][this]]

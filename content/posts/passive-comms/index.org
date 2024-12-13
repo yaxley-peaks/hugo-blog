@@ -1,0 +1,17 @@
+#+title: Async multiplayer / passive multiplayer in games (and other media)
+#+author: Yaxley Peaks
+#+summary: I am a big fan of games that implement async multiplayer mechanics
+#+tags: post
+#+date: 2024-05-08
+#+slug: delayed_comms
+
+* I really like 'Passive' communication
+
+I really like things that do passive communication. These "things" have mostly been games but there's a couple more.
+
+[[./ds.png]]
+#+html: <div style="text-align:center">Look I got 486 likes on this one :D</div>
+
+The Soulsbourne games, Minecraft (putting down a sign) and Death stranding, where you can leave messages for other players for them to find later. Even low traffic websites where I can leave comments for maybe someone else to find some day. I have also found similar comfort in BBSes and old-style leisurely mailing-lists. Even bathroom graffiti counts :)
+
+There is something extremely comforting about this I really like this and I wish more things did this.

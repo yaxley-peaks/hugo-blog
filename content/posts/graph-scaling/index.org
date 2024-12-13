@@ -1,0 +1,12 @@
+#+title: Graph scaling in Gnome weather
+#+summary: Gnome weather has funny graph scaling
+#+tags: post
+#+date: 2024-06-10
+#+slug: graph_scale
+
+* Gnome weather has funny graph scaling
+[[./gw.png]]
+
+Gnome weather has really bizarre scaling on the y-axis.
+
+*LOL*

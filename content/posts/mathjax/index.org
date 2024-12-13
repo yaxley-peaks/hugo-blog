@@ -4,6 +4,7 @@
 #+date: 2024-08-23
 #+mathjax: true
 #+summary: A celebration of finally having MathJax support on this site.
+#+tags: post
 
 * MathJax on my blog
 

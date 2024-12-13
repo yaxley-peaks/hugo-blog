@@ -1,0 +1,14 @@
+#+title: Punchable face
+#+author: Yaxley Peaks
+#+summary: This kid has a really punchable face
+#+tags: post
+#+date: 2023-02-02
+#+slug: graph_scale
+
+* This kid looks very punchable
+
+This ad I found has a very smug looking kid in it.
+
+[[./kid.jpg]]
+
+I want to punch him so bad I am sorry.
