@@ -3,7 +3,7 @@
 #+summary: This kid has a really punchable face
 #+tags: post
 #+date: 2023-02-02
-#+slug: graph_scale
+#+slug: smug_kid
 
 * This kid looks very punchable
 
