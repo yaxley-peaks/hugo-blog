@@ -1,0 +1,10 @@
+#+title: About me
+#+author: Yaxley Peaks
+#+date: 2024-12-14
+#+slug: about
+#+layout: about
+
+* About me
+
+Uh hello, this is me,
+asdfasas
