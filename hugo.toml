@@ -4,9 +4,10 @@ title = 'An archive of my own'
 theme = 'cactus'
 
 
+#aaa
 
 [params]
-description = "*Hello 👋*, You successfully made it here."
+description = "*Hello o/*, You successfully made it here! :D"
 themeColor = "theme-base-08"
 colorTheme = "light"
 mainSection = "posts"
