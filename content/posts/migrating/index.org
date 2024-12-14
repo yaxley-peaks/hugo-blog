@@ -1,0 +1,81 @@
+#+title: Migrating this blog to hugo
+#+author: Yaxley Peaks
+#+date: 2024-12-14
+#+slug: to-hugo
+#+tags: post
+#+options: toc:nil
+
+#+TOC: headlines 4
+* I have migrated my blog to Hugo
+After mulling over it for a while, I re-wrote this entire site in Hugo.
+
+I am sorry 11ty.
+
+The old version of this blog can still be found at [[https://legacy.blog.yaxley.in][legacy.blog.yaxley.in]], it will no longer be updated though.
+
+** Why?
+Org Mode!
+
+Hugo has native support for org-mode. This let's me write my posts in emacs with org-mode, using all the org specific features it has.
+
+** What features?
+
+These are the things that org does which is awkward to do in markdown.
+
+1. Interactive code blocks
+   #+begin_src python :exports both
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+return f"10! = {factorial(10)}, This result was computed at build time, by running this snippet of code."
+   #+end_src
+
+   #+RESULTS:
+   : 10! = 3628800, This result was computed at build time, by running this snippet of code.
+
+2. A very good table editor.
+   I guess this is something that you the reader does not care about, but org-mode's table editor is really good.
+| Header 1 | Header 2       |
+|----------+----------------|
+| this is  | A sample table |
+| It just  | Works          |
+
+3. First party table of contents support.
+   I can put down a TOC whenever I want wherever I want in the document, see:
+
+   #+TOC: headlines 2
+
+* Meta miscellany
+** Hugo
+I had heard a lot of good things about hugo, and there are a lot of things I like about it, but I also did not have the best of times using it.
+
+Here are a few things I like about it and things I do not. Please keep in mind that I am not very familiar with go so there are a few things in bad that may not have been there had I been more familiar with go.
+*** Good
+1. Org mode support OOTB!
+2. It is very fast.
+3. Nice collection of community made themes.
+*** Bad
+1. Incomplete, badly written and sometimes contradictory [[https://gohugo.io/documentation/][documentation]].
+   Some of the documentation is just not written very well. Hugo relies very
+   heavy on convention over configuration, and its template lookup order and the
+   single / list / baseof / home layout system is not very well explained.
+
+   There is also this part where they say that [[https://gohugo.io/content-management/formats/][content formats may be freely mixed]] and yet, =_index.(md|org)= depends on what I have set as my =defaultMarkdownHandler= in my =hugo.toml=. This is not explained anywhere.
+
+2. Hugo is really made for writing blogs. I had to fight it a lot to have free
+   standing pages that fall under no category and are only accessible via a
+   direct url (like the [[/about][about]] page)
+
+3. Hugo's insistence of not deleting contents in the ~public/~ directory in which it puts its build output meant that I tripped up several times trying to debug why things were not being removed when I had deleted them.
+
+** Cactus theme
+This webpage uses the [[https://github.com/monkeyWzr/hugo-theme-cactus][cactus]] theme. I chose this because it I though it looked nice whilst browsing [[https://themes.gohugo.io/tags/blog/][hugo themes tagged blog]]
+It looks nice, however, I had to customize it so heavily, it is no longer a git submodule in this site. Most of these customizations went to the [[/][home]] page; things like the buttons at the bottom of the page.
+
+** Javascript on this website
+I don't like serving js on my websites, however there is some js on this site that is used for QOL things like the navigation buttons over there on the top right. Be assured though, everything remains perfectly usable without javascript
+
+Anyways, I hope you like this design more than the previous one and I hope this is also a lot more usable on mobile devices.
