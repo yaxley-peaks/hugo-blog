@@ -16,6 +16,7 @@ tocInline = true
 logo = "images/favicon.ico"
 showProjectsList = true
 projectsUrl = "https://github.com/yaxley-peaks"
+copyright = "Yaxley Peaks"
 
 [params.comments]
 enabled = false
