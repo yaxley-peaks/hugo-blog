@@ -1,11 +1,51 @@
 #+layout: about
 #+title: About me
+#+author: Yaxley Peaks
 
 
-* Hello
 
-Hello this is my page, why does markup not work
+Hello, I like to to write things on this blog. There is not much else to know
+about me, you can find me online at these places:
+- [[https://github.com/yaxley-peaks][Github]]
+- [[https://bsky.app/profile/yaxley.in][BlueSky]]
+- Email: yax<at>yaxley<dot>in
+
+
+** Pgp Key
+Valid until  1^{st} March, 2025
 
 #+begin_src
-Hello
+VuvatYvzckSzae/kOgHiOoXeqYFKyaXxI3Ds+uwbaXmaPsz8IlU4XqYO2En8wNLz
+FjVIBerS8i78rXGFo9ASwbOcrzsNklGKQt9Tqg3Ou5GDLCIcGPZqusiV9AXTWdGo
+Z5fzmDn+UdCaeZux2oSV0y57zcRyQZe5u7XbrdjPTiiLPNW3fGwEOOIfWcxanGbV
+bLJpMn3aM82FYYj8DCwLYB8Jalusjex9ZoxTABEBAAG0NVlheGxleSBQIChJY2xv
+dWQgY3VzdG9tIGRvbWFpbiBlbWFpbCkgPHlheEB5YXhsZXkuaW4+iQFXBBMBCABB
+FiEEzTeJMsx5Z3xyQ33Rpp7W91uqxFIFAmXiDEYCGwMFCQHhM4AFCwkIBwICIgIG
+FQoJCAsCBBYCAwECHgcCF4AACgkQpp7W91uqxFJZ3gf+Io2r8FqHkjZMoPZrnhub
+IyXkWmEJwij+bGDmqROd1oRXS1/ct6ZZdhFkGF4VW7OcYWmFGytUSELw6o+M2TqT
+Ggd9UfyLsXBA/jVna9JDyMLQbEncT9o18A8Zj98oenj4mM7KKiZPHARARDNBf8SN
+64SdDZRvGucd7oiJGtB5WxVGcdIxjs78umNGtUk6opfKNpmCMVhYTicUr5BmwSrN
+hnr81MGvxH58OMoXhrTS+zMwgr5NiCXCS7UH9axq5tgYSmwhQvDPvT7S/6t6ikvL
+9n6QJO6M+0XT+F4ATSz29QOjuKBSJXQILw8PXMmRDOZm5lmYf6oiqRlFgIEG6nHm
+d4kBMwQQAQgAHRYhBHGi1ZN0xJIlX1OLyuWUdHEZR6eEBQJl4gyNAAoJEOWUdHEZ
+R6eEs7kH/1ZmM+dtHLAe0z6ds0o9PZn/34LnVDYuv70E2np5xwZi1wzwBXDBfzcO
+MHCNQ1sLV94bD3806dfm++Sv4TepSMYaOPPniJPwZEhWj/ohJ6y5okmR+sl5UDkp
+a0FvWUiUcDCMywgp084X9+6WHYei1HEdg1OtxP4W5frPVdUHi2XFCN1p6Fajhzf2
+ADlGB9o/yHDHq8TFkPC2RAlYKLYURU+q3SwCZYfTQWlL4bPNHO5cGdHwPicKIBWK
+zUacZzft9WE0cC7wwj5WM6Lan9bfXyR+caCJQIO8mmrfrrNcpCP14+j/+A1ehp/d
+XOb1t8CJzFFH8eAIJ6qyK4HjzJ3Db3K5AQ0EZeIMRgEIAJxqJ6TW0f4Mrn3hKvF5
+iZWiV69jssbvSjtP83+qlexZlqo5qxH2hWKNQ7Vi7lhV+1qwTvDhwDobHxpq2CNB
+NKGW7Hv00EJ7NnxWRcDQSuFlOa+MH5YxHRI1sqYn9dqz7tjYGnnjg3CvXbu1vsdE
+FcqTPCutZczhyTUvsI/er74i1nNE0hvp4QNF0/V+ZzIH9BtpbHUj8oRWpP5Ml0bN
+w6w0RrVNVuESF0I/bqJvOW+8HWz/HNFf+7Dz25Y0xwT8hnFK4tnNcw8KSZdr9zUP
+q43n1fs4ubmT4ZyS5SzLiC7lzW3bLW6CYOCGip7hUKZCYDbt2TeU5AH5C7N11oGd
+lukAEQEAAYkBPAQYAQgAJhYhBM03iTLMeWd8ckN90aae1vdbqsRSBQJl4gxGAhsM
+BQkB4TOAAAoJEKae1vdbqsRS0cAH/RzgN481eIocZS44f9ZXSfXtxN5uiX1lC9cb
+fq8oPpoahp0CeMFROgCAVsQs2fX9d1W86m2nMb8xyw/Mc2tJ2lQ+7RDPjpFUoCX/
+EM+/T0QGx/uMYfRuwY8PAB1vzHcdIzu51BLAyQjjaMHxW36ppF1CKLwBo1Ge3P8R
+q5u6KDSfxmYu9D0PNH3x3cu28cC/oJs9T4btvdUmTRB/Z/mVl1Co7NVQMKTMZAg/
+Qv52J+L5X2P4cPehmK/dnWH1cTl+jRHv+ZqjpwezYj85uYjXZSuCkNpuKq3e7Ina
+PGo28JtdKidd7OdAf3JwFEvaOaXoNWxOcMUBc2wadDJopzNU2as=
+=5G/V
+-----END PGP PUBLIC KEY BLOCK-----
 #+end_src
