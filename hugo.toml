@@ -4,6 +4,7 @@ title = 'An archive of my own'
 theme = 'cactus'
 
 
+# I need to make an "about" layout template
 
 [params]
 description = "*Hello 👋*, You successfully made it here."

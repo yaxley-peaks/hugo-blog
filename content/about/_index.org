@@ -1,0 +1,11 @@
+#+layout: about
+#+title: About me
+
+
+* Hello
+
+Hello this is my page, why does markup not work
+
+#+begin_src
+Hello
+#+end_src
