@@ -2,6 +2,7 @@ baseURL = 'https://blog.yaxley.in/'
 languageCode = 'en-in'
 title = 'An archive of my own'
 theme = 'cactus'
+copyright = "Yaxley Peaks"
 
 
 #aaa
@@ -16,7 +17,6 @@ tocInline = true
 logo = "images/favicon.ico"
 showProjectsList = true
 projectsUrl = "https://github.com/yaxley-peaks"
-copyright = "Yaxley Peaks"
 
 [params.comments]
 enabled = false
