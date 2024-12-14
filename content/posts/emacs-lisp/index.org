@@ -1,0 +1,56 @@
+#+title: A few emacs-lisp snippets
+#+summary: A few emacs lisp snippets I use
+#+author: Yaxley Peaks
+#+date: 2024-12-14
+#+tags: post
+
+* A few emacs-lisp snippents I have in my config file.
+
+** VScode style terminal toggle
+I used to use vscode  before I switched to emacs and I can't get over my ~C-`~ to toggle terminal habit. So this adds that behaviour to emacs.
+
+#+begin_src emacs-lisp
+(defvar yax/is-terminal-open nil)
+(defvar yax/open-terminal-window)
+
+(defun yax/open-term ()
+  (if (not yax/is-terminal-open)
+      (progn
+        (setq yax/is-terminal-open t)
+        (split-window nil (truncate (/ window-min-height 0.40)) 'above)
+        (term "/usr/bin/zsh")
+        (evil-insert 1)
+        (setq yax/open-terminal-window (selected-window)))
+    (setq yax/is-terminal-open nil)))
+
+(defun yax/close-term ()
+  (if yax/is-terminal-open
+      (progn
+        (setq yax/is-terminal-open nil)
+        (delete-window yax/open-terminal-window)
+        (setq yax/open-terminal-window nil))))
+
+(defun yax/toggle-term ()
+  (interactive)
+  (if yax/is-terminal-open
+      (yax/close-term)
+    (yax/open-term)))
+
+(map! :desc "Toggle terminal" :ni "C-`" 'yax/toggle-term)
+#+end_src
+
+** SpOnGeBoB CaSe text in region
+dOeS WhAt iT SaYs
+#+begin_src emacs-lisp
+(defun sponge-case-text-in-region (start end)
+  (interactive "r")
+  (setq sponge-case--temp-boolean t)
+  (save-excursion
+    (goto-char start)
+    (while (< start end)
+      (let ((char (following-char)))
+        (delete-char 1)
+        (insert-char
+         (if (cl-evenp (- end start)) (upcase char) (downcase char))))
+      (setq start (1+ start)))))
+#+end_src
