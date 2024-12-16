@@ -11,7 +11,7 @@ After mulling over it for a while, I re-wrote this entire site in Hugo.
 
 I am sorry 11ty.
 
-The old version of this blog can still be found at [[https://legac-blog.yaxley.in][legacy-blog.yaxley.in]], it will no longer be updated though.
+The old version of this blog can still be found at [[https://legacy-blog.yaxley.in][legacy-blog.yaxley.in]], it will no longer be updated though.
 
 ** Why?
 Org Mode!
