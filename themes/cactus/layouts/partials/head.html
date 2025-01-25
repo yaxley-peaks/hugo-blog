@@ -1,19 +1,11 @@
 <head>
-  <link rel="preload" href="{{ "lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin="anonymous">
-  {{ if eq .Site.Params.Comments.enabled true }}
-  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-  {{ end }}
+  <link href="{{ "lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin="anonymous">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ if .IsPage }} {{ .Title }} | {{ end }}{{ .Site.Title }}</title>
   <link rel = 'canonical' href = '{{ .Permalink }}'>
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="all,follow">
-  <meta name="googlebot" content="index,follow,snippet,archive">
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
   {{ .Scratch.Set "colortheme" "white"}}
   {{ if .Site.Params.Colortheme }}
     {{ .Scratch.Set "colortheme" .Site.Params.Colortheme }}
