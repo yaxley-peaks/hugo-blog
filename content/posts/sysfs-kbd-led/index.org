@@ -1,0 +1,38 @@
+#+title: On controlling keyboard LEDs through sysfs
+#+summary: A note to self about toggling keyboard LEDs.
+#+tags: post
+#+date: 2025-02-01
+#+options: toc:nil
+#+slug: sysfs-kbd-led
+
+* Background
+- Many many moons ago I came across [[https://askubuntu.com/questions/734849/turn-the-caps-lock-led-on-while-keep-caps-lock-status-is-off/][an askubuntu question]] [1].
+- I read it and thought it was cool.
+- Now, I have purchased a QMK'd keyboard
+- Now, My =Caps Lock= key is bound to escape
+- Therefore the keyboard LED for Caps Lock status is unused
+- I want to use this LED to do whatever else
+- I vaguely remember reading about the ability to control device drivers through Unix's "everything is a file" philosphy and writing LED state to a file.
+- I dig around in ~/dev/input/~ and find nothing
+- I dig around in ~/sys/devices/~ and fine nothing
+- I spend some time trying to find [1].
+- I finally find it now, and so I will write it down here as a note to self.
+
+* Controlling keyboard LEDs
+
+Keyboard LEDs are found in ~/sys/class/leds/~. Not in ~/dev/input/*~ or in ~/sys/devices/*~
+
+These files in ~/sys/class/leds/~ are symlinks to files in ~/sys/devices/pci*~ so I guess my hunch for finding them in ~sys/devices~ was not entirely incorrect.
+
+Toggle one like so:
+#+begin_src shell
+# turn on
+echo 1 | sudo tee /sys/class/leds/inputX::capslock/brightness
+# turn on
+echo 0 | sudo tee /sys/class/leds/inputX::capslock/brightness
+#+end_src
+where you need to figure out the value of =X= through pretty much trial and error
+
+This solution is from [[https://askubuntu.com/a/734861][this answer]] to [1].
+
+~/sys/class/leds/inputX::capslock/max_brightness~ also seems to be a file of interest.
