@@ -72,7 +72,7 @@ Here are a few things I like about it and things I do not. Please keep in mind t
 3. Hugo's insistence of not deleting contents in the ~public/~ directory in which it puts its build output meant that I tripped up several times trying to debug why things were not being removed when I had deleted them.
 
 ** Cactus theme
-This webpage uses the [[https://github.com/monkeyWzr/hugo-theme-cactus][cactus]] theme. I chose this because it I though it looked nice whilst browsing [[https://themes.gohugo.io/tags/blog/][hugo themes tagged blog]]
+This webpage uses the [[https://github.com/monkeyWzr/hugo-theme-cactus][cactus]] theme. I chose this because it I thought it looked nice whilst browsing [[https://themes.gohugo.io/tags/blog/][hugo themes tagged blog]]
 It looks nice, however, I had to customize it so heavily, it is no longer a git submodule in this site. Most of these customizations went to the [[/][home]] page; things like the buttons at the bottom of the page.
 
 ** Javascript on this website
