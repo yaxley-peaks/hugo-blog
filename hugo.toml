@@ -25,6 +25,9 @@ enabled = false
 [params.buttons]
 enabled = true
 
+[params.webrings]
+enabled = true
+
 [markup]
 defaultMarkdownHandler = 'org'
 
