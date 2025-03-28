@@ -54,3 +54,41 @@ dOeS WhAt iT SaYs
          (if (cl-evenp (- end start)) (upcase char) (downcase char))))
       (setq start (1+ start)))))
 #+end_src
+
+
+-----
+#+html: <div style="display:flex; justify-content:center">
+Modified below this point on or after <2025-03-28 Fri>
+#+html: </div>
+-----
+
+** Slcermabd text
+This one is raehtr soplilpy iemlnpmeetd.
+
+Deos not wrok well on sginle letter wrdos, mpltliue secaps, pcoiuattunn, and ohter scuh egde csaes
+
+#+begin_src emacs-lisp
+(defun string-to-words (str)
+  (string-split str " " nil))
+
+(defun scramble-word (word)
+  (let* ((word-length (length word))
+         (first-letter (substring word 0 1))
+         (last-letter (substring word (- word-length 1)))
+         (rest-of-word (substring word 1 (- word-length 1)))
+         (scrambled-letters (concat (sort (append rest-of-word '()) (lambda (a b) (cl-evenp (random)))) "")))
+    (concat first-letter scrambled-letters last-letter)))
+
+(defun scramble-words (s) (string-join
+                           (mapcar 'scramble-word
+                                   (string-to-words s)) " "))
+
+(defun scramble-words-in-region (s e)
+  (interactive "r")
+  (defun f (x) (scramble-words x))
+  (let ((buffer-text (buffer-substring s e)))
+    (replace-region-contents s e (lambda ()
+                                   ;; call a few times to properly churn
+                                   (f (f (f (f buffer-text))))))))
+#+end_src
+
