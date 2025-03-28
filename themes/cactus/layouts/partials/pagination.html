@@ -2,11 +2,11 @@
 {{ if gt $pag.TotalPages 1 }}
     <div class="pagination">
         {{ if $pag.HasPrev }}
-            <a href="{{ $pag.Prev.URL }}"><i class="fas fa-angle-left"></i></a>
+            <a name="Previous page" href="{{ $pag.Prev.URL }}">&lt;</a>
         {{ end }}
         <span class="page-number">Page {{ $pag.PageNumber }} of {{ $pag.TotalPages }}</span>
         {{ if $pag.HasNext }}
-            <a href="{{ $pag.Next.URL }}"><i class="fas fa-angle-right"></i>
+            <a name="Next page" href="{{ $pag.Next.URL }}">&gt;
             </a>
             {{ end }}
     </div>
