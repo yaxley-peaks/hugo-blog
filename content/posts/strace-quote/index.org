@@ -1,0 +1,75 @@
+#+title: On strace printing a Arthur C. Clarke quote.
+#+summary: On strace printing a particular quote from a particular novel by Arthur C. Clarke.
+#+slug: strace-quote
+#+author: yaxley peaks
+#+date: 2025-05-03
+#+tags: post
+
+
+Reading through the [[https:strace.io][Strace]] man page, I came across this curious bit of text:
+
+#+begin_quote
+       --tips[=[[id:]id],[[format:]format]]
+
+                   Show strace tips, tricks, and tweaks before exit.
+#+end_quote
+
+"Huh" I said.
+
+I tried it and it printed a tip.
+
+I tried it again and it printed a tip.
+
+I tried it again and it printed a tip.
+
+I tried it again and it printed a tip.
+
+I tried it again and it printed:
+
+#+begin_src
+  ______________________________________________         ____
+ /                                              \       /    \
+ | A particular quote from a particular novel   |      |-. .-.|
+ | by Arthur C. Clarke is printed if an attempt \      (_@)(_@)
+ | is made to attach to a particular process.    \     .---_  \
+ |                                               _\   /..   \_/
+ |                                              /     |__.-^ /
+ |                                              |         }  |
+ \______________________________________________/        |   [
+                                                         [  ]
+#+end_src
+
+????????????????????????
+
+
+/I had to find out what was this particular quote and what was the particular/
+/process I had to attempt to attach to./
+
+Googling this wasn't very helpful. Unquoted, it would take me to Goodreads and sites similar.
+
+Quoted, it just took me to [[https://github.com/strace/strace/blob/0e203584f5da4cfd2c8b6ea0e0ba617edf0f0deb/src/strauss.c#L83][the code where this message is defined]].
+
+ChatGPT was also just as useless, it was CONFIDENT that the quote in question was "All these worlds are yours, except Europa.
+attempt no landing there." and the process in question was =init= (PID 1).
+
+I eventually resorted to having ChatGPT give me Arthur Clarke quotes (for I am not too familiar with his work) and grepping for those in the strace code base (for which I give all my thanks to [[https:grep.app][https://grep.app/]]).
+
+There I found it! In =src/strace.c=, [[https://github.com/strace/strace/blob/0e203584f5da4cfd2c8b6ea0e0ba617edf0f0deb/src/strace.c#L1375][line number 1375]].
+
+#+begin_src c
+if (pid == strace_tracer_pid) {
+        error_msg_and_die("I'm sorry, I can't let you do that, Dave.");
+}
+#+end_src
+
+So this is printed when strace is asked to trace itself.
+
+
+=tests/strace-self.test= also tells us how to reproduce this:
+
+#+begin_src shell :exports code :noeval
+$ sh -c "exec strace -p \$\$"
+# strace: I'm sorry, I can't let you do that, Dave.
+#+end_src
+
+Cool I guess. I don't know how to end this post :(
