@@ -28,6 +28,9 @@ enabled = true
 [params.webrings]
 enabled = true
 
+[params.friends]
+enabled = true
+
 [markup]
 defaultMarkdownHandler = 'org'
 
