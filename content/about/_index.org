@@ -29,3 +29,6 @@ MEFy8LESAP9HXLEssSDywqKPu9o22Vh/LVLaO/idzxOXy/B1BCZWBg==
 =qAK4
 -----END PGP PUBLIC KEY BLOCK-----
 #+end_src
+
+* Colophon
+#+HTML: <p style="font-family: script">To anyone who wishes to cause damage to this website, may you be plagued by eternal bit-rot. </p>
