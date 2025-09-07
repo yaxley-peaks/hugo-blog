@@ -8,7 +8,10 @@ Hello, I like to to write things on this blog. There is not much else to know
 about me, you can find me online at these places:
 - [[https://github.com/yaxley-peaks][Github]]
 - [[https://bsky.app/profile/yaxley.in][BlueSky]]
-- Email: yax<at>yaxley<dot>in
+- Email:
+  - Please talk to me about whatever at yax<at>yaxley<dot>in
+  - Feedback about this website is encouraged and solicited through webmaster<at>yaxley<dot>in
+
 
 
 ** Pgp Key
@@ -30,5 +33,6 @@ MEFy8LESAP9HXLEssSDywqKPu9o22Vh/LVLaO/idzxOXy/B1BCZWBg==
 -----END PGP PUBLIC KEY BLOCK-----
 #+end_src
 
-* Colophon
-#+HTML: <p style="font-family: script">To anyone who wishes to cause damage to this website, may you be plagued by eternal bit-rot. </p>
+#+HTML: <br /> <br /> <hr /> <p style="font-family: monospace; text-align: center">To anyone who wishes to cause damage to this website, may you be plagued by eternal bit-rot. </p>
+
+#+HTML: <div style="filter: sepia(0.5)"><img src="/about/forget-me-not.png" alt="Please don't forget me" width="50px"></div>
