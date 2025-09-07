@@ -35,4 +35,4 @@ MEFy8LESAP9HXLEssSDywqKPu9o22Vh/LVLaO/idzxOXy/B1BCZWBg==
 
 #+HTML: <br /> <br /> <hr /> <p style="font-family: monospace; text-align: center">To anyone who wishes to cause damage to this website, may you be plagued by eternal bit-rot. </p>
 
-#+HTML: <div style="filter: sepia(0.5)"><img src="/about/forget-me-not.png" alt="Please don't forget me" width="50px"></div>
+#+HTML: <div style="filter: sepia(0.5)"><img class="animate-spin" src="/about/forget-me-not.png" alt="Please don't forget me" width="50px"></div>
