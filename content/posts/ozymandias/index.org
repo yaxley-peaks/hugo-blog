@@ -1,0 +1,10 @@
+#+title: On my Works
+#+summary:  
+#+author: Yaxley Peaks
+#+date: 2026-03-07
+#+tags: post
+#+slug: despair
+
+#+html: <span style="font-size: 2rem">"My name is Ozymandias, King of Kings: Look on my works, ye Mighty, and despair!"</span>
+#+html: <div style="height: 3rem" ></div>
+#+html: <img src="/mywork.png"  style="width: 30vw"/>
