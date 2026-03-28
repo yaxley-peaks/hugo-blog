@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Welcome to my guest book ^_^</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            color: #1d1d1d;
+        }
+
+        body {
+            max-width: 1024px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #guestbook-entry-container {
+            width: 50%;
+            margin: auto;
+            height: 50%;
+            overflow: scroll;
+            padding: 20px;
+        }
+
+        mono-space {
+            display: inline;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+<h1>Guest book</h1>
+
+<div id="guestbook-entry-container"></div>
+
+<div id="submit-form-container">
+    <form id="submit-form">
+        <label for="submitter">Your name: </label>
+        <input type="text" name="submitter" id="submitter"/>
+        <br/>
+        <label for="message">Your message: </label>
+        <textarea
+                id="message"
+                name="message"
+                placeholder="Thanks for having me :)"></textarea>
+        <button id="form-submit-btn">Submit</button>
+    </form>
+</div>
+<script>
+    const URL = "http://100.91.78.44:8080";
+</script>
+<script>
+    const form = document.querySelector("#submit-form");
+    const submitBtn = document.querySelector("#form-submit-btn");
+    const submitter = document.querySelector("#submitter");
+    const message = document.querySelector("#message");
+    const entryContainer = document.querySelector("#guestbook-entry-container");
+    const formContainer = document.querySelector("#submit-form-container");
+
+
+    function renderErrorState(error) {
+        entryContainer.innerHTML = `
+            <h2 style="color: red">There is something very wrong.</h2>
+            <p>If this issue persists. Please let me know at: <mono-space>webmaster(at)yaxley(dot)in</mono-space></p>
+            ` + (error ? `
+            <p>Please include the following in the email:
+                <mono-space style="background-color: grey; color: white">
+                    ${error}
+                </mono-space>
+            </p>
+            ` : ``);
+        formContainer.style.display = "none";
+    }
+
+    async function postData() {
+        try {
+            const data = await fetch(`${URL}/add`, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: "POST",
+                body: JSON.stringify({
+                    submitter: submitter.value,
+                    message: message.value
+                })
+            });
+            switch (data.status) {
+                case 201:
+                    location.reload();
+                    break;
+                case 429:
+                    alert("1 message / day / person. Please come back again tomorrow. Sorry :(")
+                    break;
+                default:
+                    break;
+            }
+        } catch (e) {
+            renderErrorState()
+        }
+    }
+
+    form.addEventListener("submit", e => e.preventDefault())
+    submitBtn.addEventListener("click", e => {
+        e.preventDefault();
+        postData().then(data => {
+        });
+    })
+
+
+    function transformEntries(entries) {
+        return entries.map((entry) => {
+            const time = new Intl.DateTimeFormat().format(new Date(entry?.submittedOn ?? "12-06-2002"))
+            return `
+        <div>
+            <span>
+                ${entry.message}
+            </span>
+            <br />
+            <div style="text-align: right">
+                by <mono-space>${entry.submitter}</mono-space> on <mono-space>${time}</mono-space>
+            </div>
+        </div>
+        `
+        }).join("<hr />")
+    }
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch(URL).then(res => res.json()).then(data => {
+            entryContainer.innerHTML = transformEntries(data);
+        }).catch(e => {
+            renderErrorState(e);
+        });
+    });
+
+
+</script>
+</body>
+</html>
